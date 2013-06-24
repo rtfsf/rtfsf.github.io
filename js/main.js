@@ -1,24 +1,23 @@
 var showMap = function() {
-  console.log("show map");
-  // if map was sent to display:none, it loads with the wrong center
-  $("#map").css('visibility', 'visible');
+  $("button[data-target='.nav-collapse']").trigger('click');
+  $("#map").css('position', 'static');
   $("#logo").hide();
   resizeMap();
 };
 
 var showLogo = function () {
-  console.log("show logo");
   $("#map").hide();
   $("#logo").show();
 };
 
 var resizeMap = function() {
   // 50 is a magic constant to account for padding/margin -- temporary
-  $("#map").attr('height', $(document).height() - $("#navbar").height() - 50);
+  $("#map").height($(window).height() - $("#navbar").height() - 50);
 };
 
-$(document).on("ready", resizeMap);
-$(window).on("resize", resizeMap);
+// nav bar changes size dynamically over time; easiest to just update
+// the map continually
+setInterval(resizeMap, 200);
 
 $(document).on("ready", function() {
   $(".js-map").on('click', showMap);
