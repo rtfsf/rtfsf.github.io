@@ -10,9 +10,10 @@
     <link href="css/style.css" rel="stylesheet" />
     <script src="js/jquery-1.10.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
   </head>
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <button type="button" class="btn btn-navbar" data-toggle="collapse"
@@ -21,10 +22,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="index.html">Restore the Fourth SF</a>
+          <a class="brand js-index" href="index.html">Restore the Fourth SF</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="#">Map</a></li>
+              <li><a href="#" class="js-map">Map</a></li>
               <li><a href="https://twitter.com/search?q=%23restorethe4th">Twitter Hashtag</a></li>
               <li><a href="https://twitter.com/RestoreThe4thSF">Twitter Account</a></li>
               <li><a href="http://www.reddit.com/r/restorethefourthSF/">Reddit</a></li>
@@ -37,7 +38,9 @@
     </div>
     <div class="container">
       <div class="center">
-        <img src="img/large_logo.png" alt="Restore The Fourth Logo" />
+        <img id="logo" src="img/large_logo.png" alt="Restore The Fourth Logo" />
+        <!-- embedded version of https://maps.google.com/maps/ms?msid=206091088570547141018.0004dfdb38b48ab29a579&msa=0 -->
+        <iframe id="map" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msid=206091088570547141018.0004dfdb38b48ab29a579&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;z=15&amp;output=embed" style="display:none"></iframe>
       </div>
     </div>
   </body>
