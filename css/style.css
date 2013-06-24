@@ -5,3 +5,12 @@ body {
 .center {
   text-align: center;
 }
+
+#map {
+  width: 100%;
+
+  /* position off-screen so to hide without messing up page flow */
+  /* display:none; causes map to load with wrong center */
+  position: absolute;
+  left: -10000px;
+}
