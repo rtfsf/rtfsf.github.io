@@ -1,6 +1,7 @@
 var showMap = function() {
   console.log("show map");
-  $("#map").show();
+  // if map was sent to display:none, it loads with the wrong center
+  $("#map").css('visibility', 'visible');
   $("#logo").hide();
   resizeMap();
 };
