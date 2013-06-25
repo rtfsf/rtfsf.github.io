@@ -7,7 +7,7 @@ $(function () {
   var showMap = function (evt) {
     evt.preventDefault();
     $("#navbtn").trigger('click');
-    $("#map").css('position', 'static');
+    $("#map").css('position', 'static').show();
     $("#logo").hide();
     resizeMap();
   };
