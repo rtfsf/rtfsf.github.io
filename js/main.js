@@ -5,7 +5,7 @@ $(function() {
   };
 
   var showMap = function() {
-    $("button[data-target='.nav-collapse']").trigger('click');
+    $("#navbtn").trigger('click');
     $("#map").css('position', 'static');
     $("#logo").hide();
     resizeMap();
@@ -20,6 +20,6 @@ $(function() {
   // the map continually
   setInterval(resizeMap, 200);
 
-  $(".js-map").on('click', showMap);
-  $(".js-index").on('click', showLogo);
+  $("#js-map").on('click', showMap);
+  $("#js-index").on('click', showLogo);
 });
